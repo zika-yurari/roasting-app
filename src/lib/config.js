@@ -4,12 +4,12 @@
 // ================================================================
 
 export const cognitoConfig = {
-  UserPoolId: "ap-northeast-1_XXXXXXXXX",       // ← CognitoのユーザープールID
-  ClientId:   "1234567890abcdefghijklmnop",      // ← アプリクライアントID
+  UserPoolId: "ap-northeast-1_pBOiamAXK",       // ← CognitoのユーザープールID
+  ClientId:   "dtukqtjaij5o0e1cohkqe91h1",      // ← アプリクライアントID
   Region:     "ap-northeast-1",
 };
 
 export const apiConfig = {
-  baseUrl: "https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/v1",
+  baseUrl: "https://i6qpwmn0r5.execute-api.ap-northeast-1.amazonaws.com/v1",
   // SAM deploy後にOutputsに表示されたApiEndpointの値
 };
