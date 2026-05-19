@@ -10,6 +10,6 @@ export const cognitoConfig = {
 };
 
 export const apiConfig = {
-  baseUrl: "https://i6qpwmn0r5.execute-api.ap-northeast-1.amazonaws.com/v1",
+  baseUrl: "https://qwkspw7345.execute-api.ap-northeast-1.amazonaws.com/v1",
   // SAM deploy後にOutputsに表示されたApiEndpointの値
 };
