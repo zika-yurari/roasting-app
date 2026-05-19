@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from "./hooks/useAuth";
 import AuthPage        from "./pages/AuthPage";
 import DashboardPage   from "./pages/DashboardPage";
 import NewSessionPage  from "./pages/NewSessionPage";
+import NewBeanPage     from "./pages/NewBeanPage";
 import SessionDetailPage from "./pages/SessionDetailPage";
 
 // ログイン済みでないとアクセスできないルートのラッパー
@@ -35,6 +36,9 @@ export default function App() {
           } />
           <Route path="/sessions/new" element={
             <PrivateRoute><NewSessionPage /></PrivateRoute>
+          } />
+          <Route path="/beans/new" element={
+            <PrivateRoute><NewBeanPage /></PrivateRoute>
           } />
           <Route path="/sessions/:id" element={
             <PrivateRoute><SessionDetailPage /></PrivateRoute>
