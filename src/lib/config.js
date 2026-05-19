@@ -4,8 +4,8 @@
 // ================================================================
 
 export const cognitoConfig = {
-  UserPoolId: "ap-northeast-1_XXXXXXXXX",       // ← CognitoのユーザープールID
-  ClientId:   "1234567890abcdefghijklmnop",      // ← アプリクライアントID
+  UserPoolId: "ap-northeast-1_pBOiamAXK",       // ← CognitoのユーザープールID
+  ClientId:   "dtukqtjaij5o0e1cohkqe91h1",      // ← アプリクライアントID
   Region:     "ap-northeast-1",
 };
 
