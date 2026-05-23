@@ -50,6 +50,7 @@ const s = {
 };
 
 const EVENT_COLORS = {
+  preheat:      { bg: "#EAF3DE", color: "#3B6D11", label: "Preheat" },
   start:        { bg: "#E1F5EE", color: "#0F6E56", label: "Start" },
   temp_change:  { bg: "#FAEEDA", color: "#854F0B", label: "Temp Change" },
   first_crack:  { bg: "#FAECE7", color: "#993C1D", label: "1st Crack" },
