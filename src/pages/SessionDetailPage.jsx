@@ -47,6 +47,7 @@ const s = {
   flavorTag: { background: "#e8f4fd", border: "1px solid #b5d4f4", borderRadius: "20px", padding: "4px 12px", fontSize: "12px", color: "#185FA5", cursor: "pointer" },
   flavorTagSelected: { background: "#185FA5", border: "1px solid #185FA5", borderRadius: "20px", padding: "4px 12px", fontSize: "12px", color: "#fff", cursor: "pointer" },
   notesBox: { background: "#faf7f4", border: "1px solid #e8e0d5", borderRadius: "10px", padding: "14px", fontSize: "13px", color: "#7a6a5a", lineHeight: "1.7", whiteSpace: "pre-wrap" },
+  deleteBtn: { background: "none", border: "1px solid #f5c5bb", borderRadius: "8px", color: "#c0392b", padding: "6px 14px", fontSize: "12px", cursor: "pointer", marginLeft: "auto" },
 };
 
 const EVENT_COLORS = {
@@ -158,6 +159,16 @@ export default function SessionDetailPage() {
     );
   }
 
+  async function deleteSession() {
+    if (!window.confirm("Delete this roasting session? This cannot be undone.")) return;
+    try {
+      await sessions.delete(id);
+      navigate("/");
+    } catch (err) {
+      alert("Failed to delete: " + err.message);
+    }
+  }
+
   async function saveReview() {
     setSavingReview(true);
     try {
@@ -195,6 +206,7 @@ export default function SessionDetailPage() {
     <div style={s.page}>
       <nav style={s.nav}>
         <Link to="/" style={s.back}>Back</Link>
+        <button style={s.deleteBtn} onClick={deleteSession}>Delete</button>
       </nav>
 
       <main style={s.main}>
